@@ -7,10 +7,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>Web 3.0</title>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/bootstrap.min.css">
+
+	<style>
+		.navbar {
+			border-radius: 0;
+		}
+		.sect-listado-disenos .panel-body{
+			height: 300px;
+			overflow-x:hidden;
+			overflow-y:hidden;
+			padding: 0;
+		}
+	</style>
 </head>
 <body>
-
-	<div id="container">
+	<div>
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -21,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Web 3.0</a>
+					<a class="navbar-brand" href="#">Web 3.0 - Diseños</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,7 +49,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
-		</nav>
+		</nav>		
+
+		<div class="container">			
+			<form class="form-inline">
+				<div class="form-group">
+					<label class="sr-only">Email</label>
+					<p class="form-control-static">Buscador</p>
+				</div>
+				<div class="form-group">
+					<label for="" class="sr-only">Buscar</label>
+					<input type="text" class="form-control" id="" placeholder="Buscar">
+				</div>
+				<button type="submit" class="btn btn-default">Buscar</button>
+			</form>
+
+			<br/ >
+
+			<div class="sect-listado-disenos row">
+				<?php foreach($disenos as $diseno):?>
+					<div class="panel panel-default clearfix">
+						<div class="panel-heading">
+							<h3 class="panel-title"><?php echo $diseno['name']; ?></h3>
+						</div>
+						<div class="panel-body">
+							<img src="<?php echo base_url();?>assets/images/massively.jpg" class="img-responsive">
+						</div>
+
+						<div class="panel-footer">
+							<button type="button" class="btn btn-primary">Seleccionar Diseño</button>
+						</div>
+					</div>
+				<?php endforeach;?>
+			</div>
+		</div>
 	</div>
 	<script src="<?php echo base_url();?>assets/js/jquery-3.2.1.min.js"></script>
 	<script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
