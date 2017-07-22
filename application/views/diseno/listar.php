@@ -77,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 
 						<div class="panel-footer">
-							<button type="button" class="btn btn-primary">Seleccionar Diseño</button>
+							<button type="button" class="btn btn-primary">Crear Sitio</button>
 						</div>
 					</div>
 				<?php endforeach;?>
