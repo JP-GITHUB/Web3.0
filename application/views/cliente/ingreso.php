@@ -32,21 +32,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="<?php echo base_url();?>Diseno/listar">Ver diseños</a></li>
-						<li><a href="<?php echo base_url();?>Cliente/ingreso">Ingreso a usuarios</a></li>
+						
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
 
 		<div class="container">
-			<div class="jumbotron">
-				<h1>Web 3.0</h1>
-				<p>Crea tu sitio con nosotros...</p>
-				<p><a class="btn btn-primary btn-lg" href="<?php echo base_url();?>Cliente/ingreso" role="button">Ingresar aqui.</a></p>
-			</div>
+            <form method="POST" action="<?php echo base_url();?>Cliente/autenticarse">
+                <h1>Ingreso Clientes</h1>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" name="email" class="form-control" id="" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" name="password" class="form-control" id="" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-default">Ingresar</button>
+                <a href="<?php echo base_url();?>" class="btn btn-default">Volver</a>
+            </form>
 		</div>
-		
 	</div>
 	<script src="<?php echo base_url();?>assets/js/jquery-3.2.1.min.js"></script>
 	<script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>

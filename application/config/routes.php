@@ -57,3 +57,9 @@ $route['Diseno/listar'] = "DisenoController/listar";
 
 $route['Persona/ingreso'] = "PersonaController/mostrar_ingreso";
 $route['Persona/autenticarse'] = "PersonaController/autenticarse";
+
+$route['Cliente/ingreso'] = "ClienteController/mostrar_ingreso";
+$route['Cliente/autenticarse'] = "ClienteController/autenticarse";
+$route['Cliente/administracion'] = "ClienteController/administracion";
+
+$route['Sitio/crear_sitio'] = "SitioController/crear_sitio";

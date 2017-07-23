@@ -6,7 +6,7 @@ class PersonaController extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('model_name');
+        $this->load->model('Persona_model');
     }
 
 	public function index()
@@ -25,7 +25,7 @@ class PersonaController extends CI_Controller {
     }
 
 	public function listar()
-	{
+	{   
 
 	}
 }
