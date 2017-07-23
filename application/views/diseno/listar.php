@@ -70,14 +70,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<?php foreach($disenos as $diseno):?>
 					<div class="panel panel-default clearfix">
 						<div class="panel-heading">
-							<h3 class="panel-title"><?php echo $diseno['name']; ?></h3>
+							<h3 class="panel-title"><?php echo $diseno['nombre']; ?></h3>
 						</div>
 						<div class="panel-body">
 							<img src="<?php echo base_url();?>assets/images/massively.jpg" class="img-responsive">
 						</div>
 
 						<div class="panel-footer">
-							<a href="<?php echo base_url();?>Cliente/ingreso/<?php echo $diseno['id']; ?>" class="btn btn-primary">Usar Diseño</a>
+							<a href="<?php echo base_url();?>Sitio/crear/<?php echo $diseno['id_diseno']; ?>" class="btn btn-primary">Usar Diseño</a>
 						</div>
 					</div>
 				<?php endforeach;?>

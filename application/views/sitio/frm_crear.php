@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				<ul class="nav navbar-nav">
 					<!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
-					<li><a href="#">Web 3.0 - Crear Sitio</a></li>
+					<li><a href="#">Web 3.0 - Configurar Sitio</a></li>
 				</ul>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,7 +38,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</nav>
 
 		<div class="container">
-			
+			<form method="POST" action="<?php echo base_url();?>Sitio/guardar">
+				<input type="hidden" name="id_diseno" value="">
+				<div class="form-group">
+					<label for="">Titulo</label>
+					<input type="text" class="form-control" name="titulo" placeholder="titulo">
+				</div>
+				<button type="submit" class="btn btn-default">Crear</button>
+			</form>
 		</div>
 		
 	</div>

@@ -3,18 +3,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class SitioController extends CI_Controller {
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model(array('Diseno_model', 'Cliente_model', 'Persona_model'));
+    }
+
 	public function index()
 	{
 		
 	}
 
-	public function crear_sitio()
+	public function crear($id_diseno)
 	{
-		$disenos = array(
-			"diseno1" => array("name" => "name_diseño1"),
-			"diseno2" => array("name" => "name_diseño2"),
-			"diseno3" => array("name" => "name_diseño3"),
-		);
-		$this->load->view('diseno/listar', array("disenos" => $disenos));
+		$this->load->view('sitio/frm_crear', array("id_diseno" => $id_diseno));
+	}
+
+	public function guardar()
+	{
+		#$info_diseno = $this->Diseno_model->obtener(1);
+
+		#echo var_dump($info_diseno);
 	}
 }
