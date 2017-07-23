@@ -31,18 +31,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="<?php echo base_url();?>Cliente/ingreso">Cerrar Sesión</a></li>
+						<li><a href="<?php echo base_url();?>Cliente/cerrar_sesion">Cerrar Sesión</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
 
-		<div class="container">
+		<div class="container-fluid">
 			<ul class="nav nav-pills">
 				<li class="active"><a href="<?php echo base_url();?>Diseno/listar">Crear Sitio</a></li>
 			</ul>
 		</div>
-		
+		<br />
+		<div class="container">
+			<div class="sect-listado-sitios row">
+				<?php foreach($sitios as $sitio):?>
+					<div class="panel panel-default clearfix">
+						<div class="panel-heading">
+							<h3 class="panel-title"><?php echo $sitio['titulo']; ?></h3>
+						</div>
+						<div class="panel-body">
+							<img src="<?php echo base_url();?>assets/images/massively.jpg" class="img-responsive">
+						</div>
+
+						<div class="panel-footer">
+							<a href="<?php echo base_url();?>Main/massively/<?php echo $sitio['id_sitio']; ?>" class="btn btn-primary">Ver Sitio</a>
+						</div>
+					</div>
+				<?php endforeach;?>
+			</div>
+		</div>
+			
 	</div>
 	<script src="<?php echo base_url();?>assets/js/jquery-3.2.1.min.js"></script>
 	<script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>

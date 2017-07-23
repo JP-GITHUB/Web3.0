@@ -7,4 +7,11 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('home');
 	}
+
+
+	public function massively($usuario = null)
+	{
+		$data = array("titulo" => "Test");
+		$this->load->view("templates/massively/index", $data);
+	}
 }

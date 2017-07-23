@@ -56,11 +56,14 @@ $route['translate_uri_dashes'] = FALSE;
 $route['Diseno/listar'] = "DisenoController/listar";
 
 $route['Persona/ingreso'] = "PersonaController/mostrar_ingreso";
-$route['Persona/autenticarse'] = "PersonaController/autenticarse";
 
 $route['Cliente/ingreso'] = "ClienteController/mostrar_ingreso";
+$route['Cliente/cerrar_sesion'] = "ClienteController/cerrar_sesion";
 $route['Cliente/autenticarse'] = "ClienteController/autenticarse";
 $route['Cliente/administracion'] = "ClienteController/administracion";
 
 $route['Sitio/crear/(:any)'] = "SitioController/crear/$1";
 $route['Sitio/guardar'] = "SitioController/guardar";
+
+/*Templates*/
+$route['Main/massively/(:any)'] = "Main/massively/$1";

@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<div class="container">
 			<form method="POST" action="<?php echo base_url();?>Sitio/guardar">
-				<input type="hidden" name="id_diseno" value="">
+				<input type="hidden" name="id_diseno" value="<?php echo $id_diseno;?>">
 				<div class="form-group">
 					<label for="">Titulo</label>
 					<input type="text" class="form-control" name="titulo" placeholder="titulo">

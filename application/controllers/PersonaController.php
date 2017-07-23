@@ -20,8 +20,7 @@ class PersonaController extends CI_Controller {
     }
 
     public function autenticarse(){
-        $email = $this->input->post("email");
-        $password = $this->input->post("password");
+
     }
 
 	public function listar()

@@ -6,12 +6,12 @@ class SitioController extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('Diseno_model', 'Cliente_model', 'Persona_model'));
+        $this->load->model(array('Sitio_model', 'Diseno_model', 'Cliente_model', 'Persona_model'));
     }
 
 	public function index()
 	{
-		
+
 	}
 
 	public function crear($id_diseno)
@@ -21,8 +21,22 @@ class SitioController extends CI_Controller {
 
 	public function guardar()
 	{
-		#$info_diseno = $this->Diseno_model->obtener(1);
+		$session = $this->session->email_session;
+		if($session){
+			$cuenta = $this->Cliente_model->verificar_cuenta($session);
+			if($cuenta->id_rol === "2"){
+				$id_cliente = $cuenta->id_persona;
+				$id_diseno = $this->input->post("id_diseno");
+				$titulo = $this->input->post("titulo");
 
-		#echo var_dump($info_diseno);
+				$estado_insert = $this->Sitio_model->guardar($titulo, '', $id_diseno, $id_cliente);
+				if($estado_insert){
+					redirect("Cliente/administracion");
+					#$this->load->view("cliente/administracion");
+				}else{
+					echo "Err";
+				}
+			}
+		}
 	}
 }
