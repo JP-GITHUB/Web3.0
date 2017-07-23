@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Web 3.0 - Diseños</a>
+					<a class="navbar-brand" href="#">Web 3.0 - Crear Sitio</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -70,14 +70,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<?php foreach($disenos as $diseno):?>
 					<div class="panel panel-default clearfix">
 						<div class="panel-heading">
-							<h3 class="panel-title"><?php echo $diseno['name']; ?></h3>
+							<h3 class="panel-title"><?php echo $diseno['nombre']; ?></h3>
 						</div>
 						<div class="panel-body">
 							<img src="<?php echo base_url();?>assets/images/massively.jpg" class="img-responsive">
 						</div>
 
 						<div class="panel-footer">
-							<button type="button" class="btn btn-primary">Crear Sitio</button>
+							<a href="<?php echo base_url();?>Sitio/crear/<?php echo $diseno['id_diseno']; ?>" class="btn btn-primary">Usar Diseño</a>
 						</div>
 					</div>
 				<?php endforeach;?>

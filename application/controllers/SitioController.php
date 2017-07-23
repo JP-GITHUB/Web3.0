@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class DisenoController extends CI_Controller {
+class SitioController extends CI_Controller {
 
     public function __construct()
     {
@@ -14,9 +14,15 @@ class DisenoController extends CI_Controller {
 		
 	}
 
-	public function listar()
+	public function crear($id_diseno)
 	{
-		$disenos = $this->Diseno_model->listar();
-		$this->load->view('diseno/listar', array("disenos" => $disenos));
+		$this->load->view('sitio/frm_crear', array("id_diseno" => $id_diseno));
+	}
+
+	public function guardar()
+	{
+		#$info_diseno = $this->Diseno_model->obtener(1);
+
+		#echo var_dump($info_diseno);
 	}
 }

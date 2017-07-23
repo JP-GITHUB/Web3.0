@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Web 3.0</title>
+	<title>Web 3.0 - Crear Sitio</title>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/bootstrap.min.css">
 </head>
@@ -22,29 +22,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<span class="icon-bar"></span>
 					</button>
 				</div>
-				<!--
+
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-					<li><a href="#">Link</a></li>
+					<!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+					<li><a href="#">Web 3.0 - Configurar Sitio</a></li>
 				</ul>
-				-->
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="<?php echo base_url();?>Diseno/listar">Ver diseños</a></li>
-						<li><a href="<?php echo base_url();?>Cliente/ingreso">Ingreso a usuarios</a></li>
+						<li><a href="<?php echo base_url();?>Cliente/ingreso">Cerrar Sesión</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
 
 		<div class="container">
-			<div class="jumbotron">
-				<h1>Web 3.0</h1>
-				<p>Crea tu sitio con nosotros...</p>
-				<p><a class="btn btn-primary btn-lg" href="<?php echo base_url();?>Cliente/ingreso" role="button">Ingresar aqui.</a></p>
-			</div>
+			<form method="POST" action="<?php echo base_url();?>Sitio/guardar">
+				<input type="hidden" name="id_diseno" value="">
+				<div class="form-group">
+					<label for="">Titulo</label>
+					<input type="text" class="form-control" name="titulo" placeholder="titulo">
+				</div>
+				<button type="submit" class="btn btn-default">Crear</button>
+			</form>
 		</div>
 		
 	</div>
