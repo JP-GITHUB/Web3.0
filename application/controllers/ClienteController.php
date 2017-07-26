@@ -38,6 +38,11 @@ class ClienteController extends CI_Controller {
 
     public function administracion()
     {
+		if(!$this->session->email_session){
+			$this->session->set_flashdata('redirect_msg', 'Para realizar la acción se debe estar autenticado.');
+			redirect("/");
+		}
+        
         $id_cliente = $this->session->cliente_session->id_persona;
         $sitios = $this->Sitio_model->listar($id_cliente);
         $this->load->view("cliente/administracion", array(
