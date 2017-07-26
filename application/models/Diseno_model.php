@@ -14,12 +14,12 @@ class Diseno_model extends CI_Model {
 
     public function listar()
     {
-        return $this->db->get_where('Diseno', array('estado' => 1))->result_array();
+        return $this->db->get_where('diseno', array('estado' => 1))->result_array();
     }
 
     public function obtener($id_diseno)
     {
-        return $this->db->get_where('Diseno', array('id_diseno' => $id_diseno))->result_array();
+        return $this->db->get_where('diseno', array('id_diseno' => $id_diseno))->result_array();
     }
 
 }

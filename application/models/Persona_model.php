@@ -16,7 +16,7 @@ class Persona_model extends CI_Model {
 
     public function obtener_informacion()
     {
-        return $this->db->get_where('Persona', array('email' => $this->email, 'id_rol' => 2))->row();
+        return $this->db->get_where('persona', array('email' => $this->email, 'id_rol' => 2))->row();
     }
 
     public function registrar_persona()
