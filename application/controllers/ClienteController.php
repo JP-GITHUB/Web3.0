@@ -27,7 +27,9 @@ class ClienteController extends CI_Controller {
 
         $info_cliente = $this->Cliente_model->verificar_cuenta($email);
         if($info_cliente->clave === $password){
+            unset($info_cliente->clave);
             $this->session->set_userdata('email_session', $email);
+            $this->session->set_userdata('cliente_session', $info_cliente);
             redirect('Cliente/administracion');     
         }else{
             redirect('/');
@@ -36,8 +38,8 @@ class ClienteController extends CI_Controller {
 
     public function administracion()
     {
-        $sitios = $this->Sitio_model->listar();
-        
+        $id_cliente = $this->session->cliente_session->id_persona;
+        $sitios = $this->Sitio_model->listar($id_cliente);
         $this->load->view("cliente/administracion", array(
             "sitios" => $sitios 
         ));
@@ -45,6 +47,7 @@ class ClienteController extends CI_Controller {
 
     public function cerrar_sesion()
     {
+        $this->session->unset_userdata('cliente_session');
         $this->session->unset_userdata('email_session');
         redirect('/');
     }

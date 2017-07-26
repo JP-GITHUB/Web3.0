@@ -47,8 +47,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 		
+		
+		
 	</div>
 	<script src="<?php echo base_url();?>assets/js/jquery-3.2.1.min.js"></script>
 	<script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js/bootbox.min.js"></script>
+	<script>
+		var redirect_msg = "<?php echo ($this->session->flashdata('redirect_msg')) ? $this->session->flashdata('redirect_msg') : '';?>";
+		if(redirect_msg !== "") bootbox.alert(redirect_msg);
+	</script>
 </body>
 </html>

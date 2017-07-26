@@ -51,11 +51,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<h3 class="panel-title"><?php echo $sitio['titulo']; ?></h3>
 						</div>
 						<div class="panel-body">
-							<img src="<?php echo base_url();?>assets/images/massively.jpg" class="img-responsive">
+							<img src="<?php echo base_url();?>assets/images/<?php echo $sitio['ruta']; ?>.jpg" class="img-responsive">
 						</div>
 
 						<div class="panel-footer">
-							<a href="<?php echo base_url();?>Main/massively/<?php echo $sitio['id_sitio']; ?>" class="btn btn-primary">Ver Sitio</a>
+							<a href="<?php echo base_url();?>Main/<?php echo $sitio['ruta']; ?>/<?php echo $sitio['id_sitio']; ?>" class="btn btn-primary">Ver Sitio</a>
 						</div>
 					</div>
 				<?php endforeach;?>

@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Web 3.0 - Crear Sitio</a>
+					<a class="navbar-brand" href="#">Web 3.0 - Listar</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -61,7 +61,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<label for="" class="sr-only">Buscar</label>
 					<input type="text" class="form-control" id="" placeholder="Buscar">
 				</div>
-				<button type="submit" class="btn btn-default">Buscar</button>
+				<button type="submit" class="btn btn-default" disabled="disabled">Buscar</button>
+				<a class="btn btn-default pull-right" href="<?php echo base_url();?>Cliente/administracion">Volver</a>
 			</form>
 
 			<br/ >

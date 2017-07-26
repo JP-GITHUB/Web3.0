@@ -13,9 +13,20 @@ class Sitio_model extends CI_Model {
         parent::__construct();
     }
 
-    public function listar()
+    public function listar($id_cliente = null)
     {
-        return $this->db->get_where('Sitio', array('estado' => 1))->result_array();
+        $query = "
+            SELECT 
+                *
+            FROM
+                sitio,
+                diseno
+            WHERE
+                sitio.id_diseno = diseno.id_diseno
+                    AND sitio.id_persona = ?
+                    AND sitio.estado = 1";
+
+        return $this->db->query($query, array($id_cliente))->result_array();
     }
 
     public function obtener($id_diseno)

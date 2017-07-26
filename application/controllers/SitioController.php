@@ -16,6 +16,11 @@ class SitioController extends CI_Controller {
 
 	public function crear($id_diseno)
 	{
+		if(!$this->session->email_session){
+			$this->session->set_flashdata('redirect_msg', 'Para realizar la acción se debe estar autenticado.');
+			redirect("/");
+		}
+
 		$this->load->view('sitio/frm_crear', array("id_diseno" => $id_diseno));
 	}
 
@@ -32,7 +37,6 @@ class SitioController extends CI_Controller {
 				$estado_insert = $this->Sitio_model->guardar($titulo, '', $id_diseno, $id_cliente);
 				if($estado_insert){
 					redirect("Cliente/administracion");
-					#$this->load->view("cliente/administracion");
 				}else{
 					echo "Err";
 				}

@@ -14,4 +14,10 @@ class Main extends CI_Controller {
 		$data = array("titulo" => "Test");
 		$this->load->view("templates/massively/index", $data);
 	}
+
+	public function story($usuario = null)
+	{
+		$data = array("titulo" => "Test");
+		$this->load->view("templates/story/index", $data);
+	}
 }

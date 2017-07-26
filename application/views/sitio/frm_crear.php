@@ -45,6 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<input type="text" class="form-control" name="titulo" placeholder="titulo">
 				</div>
 				<button type="submit" class="btn btn-default">Crear</button>
+				<a class="btn btn-default" href="<?php echo base_url();?>Diseno/listar">Volver</a>
 			</form>
 		</div>
 		
