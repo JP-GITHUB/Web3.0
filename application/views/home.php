@@ -228,16 +228,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
   </form>
 </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
     
     
@@ -252,7 +242,6 @@ espectaculares galerías, versión móvil optimizada, dominios,
 hosting seguro, SEO, centro de ayuda las 24 hrs. y mucho
 más en una sola plataforma de creación de páginas web.</h4><br>
       
-      <br><button class="btn btn-default btn-lg">Ver Diseños</button>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-signal logo"></span>
