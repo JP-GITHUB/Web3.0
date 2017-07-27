@@ -207,8 +207,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <ul class="nav navbar-nav navbar-left">
                   <li><a href="#about">Inicio</a></li>
                   <li><a href="#services">Estilos</a></li>
-                  <li><a href="#portfolio">Diseños</a></li>
-                  <li><a href="#contact">Contacto</a></li>
                 </ul>
                  
                   <ul class="nav navbar-nav navbar-right">
@@ -224,7 +222,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <p>Todo para crear tu pagina web, en un mismo lugar...</p> 
   <form>
     <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Ingresa tu email" required>
       <div class="input-group-btn">
         <a class="btn btn-default" href="<?php echo base_url();?>Cliente/ingreso" role="button">Ingresar aqui.</a></p>
       </div>
@@ -327,33 +324,7 @@ más en una sola plataforma de creación de páginas web.</h4><br>
   </div>
 </div>
 
-<!-- Container (Portfolio Section) -->
-<div id="portfolio" class="container-fluid text-center bg-grey">
-  <h2>Diseños</h2><br>
-  <h4>Elige el que mas te gusta</h4>
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-          <img src="../views/Imagenes/imagen1.png" class="img-rounded" alt="Cinque Terre" width="304" height="236">
-        <p><strong>Diseño1</strong></p>
-        <p>Detalle</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-          <img src="../views/imagenes/imagen2.jpg.png" alt="pagina2" width="400" height="300">
-        <p><strong>Diseño2</strong></p>
-        <p>Detalle</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-          <img src="../views/imagenes/imagen3.png" alt="imagen3" width="400" height="300">
-        <p><strong>Diseño3</strong></p>
-        <p>Detalle</p>
-      </div>
-    </div>
-  </div><br>
+  <br>
   
   <h2>Comentarios</h2>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
@@ -388,37 +359,6 @@ más en una sola plataforma de creación de páginas web.</h4><br>
     </a>
   </div>
 </div>
-
-
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">Contacto</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Contactanos y responderemos lo antes posible a tus consultas</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span>El Bosque Norte 0123, Oficina 1501, Las Condes, Chile</p>
-      <p><span class="glyphicon glyphicon-phone"></span> 22039394</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> Web3.0@gmail.com</p>
-    </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="nombre" name="name" placeholder="Nombre" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comentario" name="comments" placeholder="Consulta" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Enviar   </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
 <script>
