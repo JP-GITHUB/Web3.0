@@ -1,88 +1,69 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+	defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>Web3.0 - Listar</title>
 	<meta charset="utf-8">
-	<title>Web 3.0</title>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/bootstrap.min.css">
-
-	<style>
-		.navbar {
-			border-radius: 0;
-		}
-		.sect-listado-disenos .panel-body{
-			height: 300px;
-			overflow-x:hidden;
-			overflow-y:hidden;
-			padding: 0;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 </head>
-<body>
-	<div>
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
+<body id="Web 3.0" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="myNavbar">
 					<a class="navbar-brand" href="#">Web 3.0 - Listar</a>
-				</div>
-
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Ver Información</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#">Sesión</a></li>
-						</ul>
-						</li>
+						<li><a href="<?php echo base_url();?>Cliente/cerrar_sesion">Cerrar Sesión</a></li>
 					</ul>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
-		</nav>		
-
-		<div class="container">			
-			<form class="form-inline">
-				<div class="form-group">
-					<label class="sr-only">Email</label>
-					<p class="form-control-static">Buscador</p>
 				</div>
-				<div class="form-group">
-					<label for="" class="sr-only">Buscar</label>
-					<input type="text" class="form-control" id="" placeholder="Buscar">
-				</div>
-				<button type="submit" class="btn btn-default" disabled="disabled">Buscar</button>
-				<a class="btn btn-default pull-right" href="<?php echo base_url();?>Cliente/administracion">Volver</a>
-			</form>
-
-			<br/ >
-
-			<div class="sect-listado-disenos row">
-				<?php foreach($disenos as $diseno):?>
-					<div class="panel panel-default clearfix">
-						<div class="panel-heading">
-							<h3 class="panel-title"><?php echo $diseno['nombre']; ?></h3>
-						</div>
-						<div class="panel-body">
-							<img src="<?php echo base_url();?>assets/images/massively.jpg" class="img-responsive">
-						</div>
-
-						<div class="panel-footer">
-							<a href="<?php echo base_url();?>Sitio/crear/<?php echo $diseno['id_diseno']; ?>" class="btn btn-primary">Usar Diseño</a>
-						</div>
-					</div>
-				<?php endforeach;?>
 			</div>
+		</div>
+	</nav>
+
+	<br><br><br>
+
+	<div class="container">			
+		<form class="form-inline">
+			<div class="form-group">
+				<label class="sr-only">Email</label>
+				<p class="form-control-static">Buscador</p>
+			</div>
+			<div class="form-group">
+				<label for="" class="sr-only">Buscar</label>
+				<input type="text" class="form-control" id="" placeholder="Buscar">
+			</div>
+			<button type="submit" class="btn btn-default" disabled="disabled">Buscar</button>
+			<a class="btn btn-default pull-right" href="<?php echo base_url();?>Cliente/administracion">Volver</a>
+		</form>
+
+		<br/ >
+
+		<div class="sect-listado-disenos row">
+			<?php foreach($disenos as $diseno):?>
+				<div class="panel panel-default clearfix">
+					<div class="panel-heading">
+						<h3 class="panel-title"><?php echo $diseno['nombre']; ?></h3>
+					</div>
+					<div class="panel-body">
+						<img src="<?php echo base_url();?>assets/images/massively.jpg" class="img-responsive">
+					</div>
+
+					<div class="panel-footer">
+						<a href="<?php echo base_url();?>Sitio/crear/<?php echo $diseno['id_diseno']; ?>" class="btn btn-primary">Usar Diseño</a>
+					</div>
+				</div>
+			<?php endforeach;?>
 		</div>
 	</div>
 	<script src="<?php echo base_url();?>assets/js/jquery-3.2.1.min.js"></script>
