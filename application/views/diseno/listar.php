@@ -23,9 +23,11 @@
 				</button>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<a class="navbar-brand" href="#">Web 3.0 - Listar</a>
+					<?php if ($this->session->email_session):?>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="<?php echo base_url();?>Cliente/cerrar_sesion">Cerrar Sesión</a></li>
 					</ul>
+					<?php endif;?>
 				</div>
 			</div>
 		</div>
