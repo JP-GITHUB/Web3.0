@@ -56,6 +56,10 @@ $route['translate_uri_dashes'] = FALSE;
 $route['Diseno/listar_disenos'] = "DisenoController/listar_disenos";
 
 $route['Cliente/ingreso'] = "ClienteController/mostrar_ingreso";
+$route['Cliente/registrarse'] = "ClienteController/frm_registro_cliente";
+$route['Cliente/guardar_datos_cliente'] = "ClienteController/guardar_datos_cliente";
+
+
 $route['Cliente/cerrar_sesion'] = "ClienteController/cerrar_sesion";
 $route['Cliente/autenticarse'] = "ClienteController/autenticarse";
 $route['Cliente/administracion'] = "ClienteController/administracion";

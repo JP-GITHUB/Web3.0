@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="<?php echo base_url();?>Diseno/listar">Ver diseños</a></li>
+						<li><a href="<?php echo base_url();?>Diseno/listar_disenos">Ver diseños</a></li>
 						<li><a href="<?php echo base_url();?>Cliente/ingreso">Ingreso a usuarios</a></li>
 					</ul>
 				</div>

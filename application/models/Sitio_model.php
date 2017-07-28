@@ -42,10 +42,12 @@ class Sitio_model extends CI_Model {
             "url" => $url,
             "estado" => 1,
             "id_diseno" => $id_diseno,
-            "id_persona" => $id_cliente
+            "id_persona" => $id_cliente,
+            "estado" => 1,
+            "id_rol" => 2
         );
 
-        return $this->db->insert('sitio', $data);
+        return $this->db->insert('persona', $data);
     }
 
 }

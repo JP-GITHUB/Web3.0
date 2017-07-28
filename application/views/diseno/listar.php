@@ -44,7 +44,7 @@
 				<input type="text" class="form-control" id="" placeholder="Buscar">
 			</div>
 			<button type="submit" class="btn btn-default" disabled="disabled">Buscar</button>
-			<a class="btn btn-default pull-right" href="<?php echo base_url();?>Cliente/administracion">Volver</a>
+			<a class="btn btn-default pull-right" href="<?php echo base_url(($this->session->email_session) ? 'Cliente/administracion' : '/');?>">Volver</a>
 		</form>
 
 		<br/ >
