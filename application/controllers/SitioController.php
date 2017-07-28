@@ -6,7 +6,7 @@ class SitioController extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('Sitio_model', 'Cliente_model'));
+        $this->load->model(array('Sitio_model', 'Cliente_model', 'Persona_model'));
     }
 
 	public function index()
@@ -33,13 +33,14 @@ class SitioController extends CI_Controller {
 				$id_cliente = $cuenta->id_persona;
 				$id_diseno = $this->input->post("id_diseno");
 				$titulo = $this->input->post("titulo");
+				$url = $id_cliente . "_" . uniqid('', true);
 
 				if(trim($titulo) === ""){
 					$this->session->set_flashdata('redirect_msg', 'Campo titulo es obligatorio.');
 					redirect("Sitio/configuracion_diseno/" . $id_diseno);
 				}
 			
-				$estado_insert = $this->Sitio_model->guarda_informacion_sitio($titulo, '', $id_diseno, $id_cliente);
+				$estado_insert = $this->Sitio_model->guarda_informacion_sitio($titulo, $url, $id_diseno, $id_cliente);
 				if($estado_insert){
 					redirect("Cliente/administracion");
 				}else{

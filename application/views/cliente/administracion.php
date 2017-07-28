@@ -49,7 +49,7 @@
 					</div>
 
 					<div class="panel-footer">
-						<a href="<?php echo base_url();?>Main/<?php echo $sitio['ruta']; ?>/<?php echo $sitio['id_sitio']; ?>" target="_blank" class="btn btn-primary">Ver Sitio</a>
+						<a href="<?php echo base_url();?>Main/<?php echo $sitio['ruta']; ?>/<?php echo $sitio['url']; ?>" target="_blank" class="btn btn-primary">Ver Sitio</a>
 					</div>
 				</div>
 			<?php endforeach;?>

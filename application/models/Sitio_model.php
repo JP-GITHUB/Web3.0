@@ -34,7 +34,12 @@ class Sitio_model extends CI_Model {
         return $this->db->get_where('sitio', array('id_sitio' => $id_sitio))->result_array();
     }
 
-    public function guarda_informacion_sitio($titulo, $url = "", $id_diseno, $id_cliente)
+    public function get_by_url($url)
+    {
+        return $this->db->get_where('sitio', array('url' => $url))->row();
+    }
+
+    public function guarda_informacion_sitio($titulo, $url, $id_diseno, $id_cliente)
     {  
         $data = array(
             "id_sitio" => 0,
@@ -43,11 +48,10 @@ class Sitio_model extends CI_Model {
             "estado" => 1,
             "id_diseno" => $id_diseno,
             "id_persona" => $id_cliente,
-            "estado" => 1,
-            "id_rol" => 2
+            "estado" => 1
         );
 
-        return $this->db->insert('persona', $data);
+        return $this->db->insert('sitio', $data);
     }
 
 }
