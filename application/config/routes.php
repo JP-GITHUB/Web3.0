@@ -55,8 +55,6 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['Diseno/listar'] = "DisenoController/listar";
 
-$route['Persona/ingreso'] = "PersonaController/mostrar_ingreso";
-
 $route['Cliente/ingreso'] = "ClienteController/mostrar_ingreso";
 $route['Cliente/cerrar_sesion'] = "ClienteController/cerrar_sesion";
 $route['Cliente/autenticarse'] = "ClienteController/autenticarse";
