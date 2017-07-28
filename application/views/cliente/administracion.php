@@ -50,6 +50,8 @@
 
 					<div class="panel-footer">
 						<a href="<?php echo base_url();?>Main/<?php echo $sitio['ruta']; ?>/<?php echo $sitio['url']; ?>" target="_blank" class="btn btn-primary">Ver Sitio</a>
+						<a href="" class="btn btn-primary" disabled>Modificar</a>
+						<a href="<?php echo base_url();?>Sitio/suspender_sitio/<?php echo $sitio['id_sitio']; ?>" class="btn btn-primary" disabled>Eliminar</a>
 					</div>
 				</div>
 			<?php endforeach;?>
