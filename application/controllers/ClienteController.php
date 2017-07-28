@@ -25,14 +25,15 @@ class ClienteController extends CI_Controller {
         $email = $this->input->post("email");
         $password = $this->input->post("password");
 
-        $info_cliente = $this->Cliente_model->verificar_cuenta($email);
+        $info_cliente = $this->Cliente_model->consultar_cuenta($email);
         if($info_cliente->clave === $password){
             unset($info_cliente->clave);
             $this->session->set_userdata('email_session', $email);
             $this->session->set_userdata('cliente_session', $info_cliente);
             redirect('Cliente/administracion');     
         }else{
-            redirect('/');
+            $this->session->set_flashdata('redirect_msg', 'Usuario o Contraseña son incorrectas.');
+            redirect('Cliente/ingreso');
         }
     }
 
@@ -44,9 +45,11 @@ class ClienteController extends CI_Controller {
 		}
         
         $id_cliente = $this->session->cliente_session->id_persona;
-        $sitios = $this->Sitio_model->listar($id_cliente);
+        $lista_sitios = $this->Sitio_model->listar_sitios($id_cliente);
+
+        /*Muestra Lista de Sitios*/
         $this->load->view("cliente/administracion", array(
-            "sitios" => $sitios 
+            "sitios" => $lista_sitios 
         ));
     }
 

@@ -13,7 +13,7 @@ class Sitio_model extends CI_Model {
         parent::__construct();
     }
 
-    public function listar($id_cliente = null)
+    public function listar_sitios($id_cliente = null)
     {
         $query = "
             SELECT 
@@ -34,7 +34,7 @@ class Sitio_model extends CI_Model {
         return $this->db->get_where('sitio', array('id_sitio' => $id_sitio))->result_array();
     }
 
-    public function guardar($titulo, $url = "", $id_diseno, $id_cliente)
+    public function guarda_informacion_sitio($titulo, $url = "", $id_diseno, $id_cliente)
     {  
         $data = array(
             "id_sitio" => 0,

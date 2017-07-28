@@ -35,7 +35,7 @@
 
 	<div class="container">
 		<ul class="nav nav-pills botonera-adm">
-			<li class="active"><a href="<?php echo base_url();?>Diseno/listar">Crear Sitio</a></li>
+			<li class="active"><a href="<?php echo base_url();?>Diseno/listar_disenos">Crear Sitio Web</a></li>
 		</ul>
 		<br>
 		<div class="sect-listado-sitios row">

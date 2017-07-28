@@ -168,41 +168,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<script src="<?php echo base_url();?>assets/js/jquery-3.2.1.min.js"></script>
 	<script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js/bootbox.min.js"></script>
+
 	<script>
-	$(document).ready(function(){
-		// Add smooth scrolling to all links in navbar + footer link
-		$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-			// Make sure this.hash has a value before overriding default behavior
-			if (this.hash !== "") {
-				// Prevent default anchor click behavior
-				event.preventDefault();
+		$(document).ready(function(){
+			var redirect_msg = "<?php echo ($this->session->flashdata('redirect_msg')) ? $this->session->flashdata('redirect_msg') : '';?>";
+			if(redirect_msg !== "") bootbox.alert(redirect_msg);
 
-				// Store hash
-				var hash = this.hash;
+			$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+					// Prevent default anchor click behavior
+					event.preventDefault();
 
-				// Using jQuery's animate() method to add smooth page scroll
-				// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-				$('html, body').animate({
-					scrollTop: $(hash).offset().top
-				}, 900, function(){
+					// Store hash
+					var hash = this.hash;
 
-					// Add hash (#) to URL when done scrolling (default click behavior)
-					window.location.hash = hash;
-				});
-			} // End if
-		});
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 900, function(){
 
-		$(window).scroll(function() {
-			$(".slideanim").each(function(){
-				var pos = $(this).offset().top;
-
-				var winTop = $(window).scrollTop();
-					if (pos < winTop + 600) {
-						$(this).addClass("slide");
-					}
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+					});
+				} // End if
 			});
-		});
-	})
+
+			$(window).scroll(function() {
+				$(".slideanim").each(function(){
+					var pos = $(this).offset().top;
+
+					var winTop = $(window).scrollTop();
+						if (pos < winTop + 600) {
+							$(this).addClass("slide");
+						}
+				});
+			});
+		})
 	</script>
 
 </body>

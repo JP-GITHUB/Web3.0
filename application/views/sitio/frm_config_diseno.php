@@ -35,7 +35,7 @@
 
 	<div class="container">
 		<h1>Configuración del Nuevo Sitio</h1>
-		<form method="POST" action="<?php echo base_url();?>Sitio/guardar">
+		<form method="POST" action="<?php echo base_url();?>Sitio/guarda_informacion_sitio">
 			<input type="hidden" name="id_diseno" value="<?php echo $id_diseno;?>">
 			<div class="form-group">
 				<label for="">Titulo</label>
@@ -47,5 +47,12 @@
 	</div>
 	<script src="<?php echo base_url();?>assets/js/jquery-3.2.1.min.js"></script>
 	<script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js/bootbox.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var redirect_msg = "<?php echo ($this->session->flashdata('redirect_msg')) ? $this->session->flashdata('redirect_msg') : '';?>";
+			if(redirect_msg !== "") bootbox.alert(redirect_msg);
+		});
+	</script>
 </body>
 </html>

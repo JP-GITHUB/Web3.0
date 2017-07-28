@@ -179,3 +179,7 @@
 .botonera-adm{
     margin-top: 20px;
 }
+
+.modal-dialog {
+    margin: 60px auto;
+}

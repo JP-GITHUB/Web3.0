@@ -60,7 +60,7 @@
 					</div>
 
 					<div class="panel-footer">
-						<a href="<?php echo base_url();?>Sitio/crear/<?php echo $diseno['id_diseno']; ?>" class="btn btn-primary">Usar Diseño</a>
+						<a href="<?php echo base_url();?>Sitio/configuracion_diseno/<?php echo $diseno['id_diseno']; ?>" class="btn btn-primary">Usar Diseño</a>
 					</div>
 				</div>
 			<?php endforeach;?>

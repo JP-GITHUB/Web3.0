@@ -9,7 +9,7 @@ class Cliente_model extends CI_Model {
         parent::__construct();
     }
 
-    public function verificar_cuenta($email){
+    public function consultar_cuenta($email){
         $this->Persona_model->email = $email;
         return $this->Persona_model->obtener_informacion();
     }

@@ -12,7 +12,7 @@ class Diseno_model extends CI_Model {
         parent::__construct();
     }
 
-    public function listar()
+    public function consultar_disenos()
     {
         return $this->db->get_where('diseno', array('estado' => 1))->result_array();
     }

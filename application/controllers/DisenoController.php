@@ -14,9 +14,9 @@ class DisenoController extends CI_Controller {
 		
 	}
 
-	public function listar()
+	public function listar_disenos()
 	{
-		$disenos = $this->Diseno_model->listar();
+		$disenos = $this->Diseno_model->consultar_disenos();
 		$this->load->view('diseno/listar', array("disenos" => $disenos));
 	}
 }
