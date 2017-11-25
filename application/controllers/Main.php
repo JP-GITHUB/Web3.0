@@ -19,7 +19,10 @@ class Main extends CI_Controller {
 	public function massively($url = null)
 	{
 		$info_sitio = $this->Sitio_model->get_by_url($url);
-		$data = array("titulo" => $info_sitio->titulo, "info" => $info_sitio);
+		$data = array(
+			"titulo" => isset($info_sitio->titulo) ? $info_sitio->titulo : "",
+			"info" => $info_sitio
+		);
 		$this->load->view("templates/massively/index", $data);
 	}
 

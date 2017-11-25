@@ -69,3 +69,19 @@ $route['Sitio/guarda_informacion_sitio'] = "SitioController/guarda_informacion_s
 
 /*Templates*/
 $route['Main/massively/(:any)'] = "Main/massively/$1";
+
+
+$route['Administrador/ingreso'] = "AdministradorController/mostrar_ingreso";
+$route['Administrador/cerrar_sesion'] = "AdministradorController/cerrar_sesion";
+$route['Administrador/guardar_datos_admin'] = "AdministradorController/guardar_datos_admin";
+$route['Administrador/autenticarse'] = "AdministradorController/autenticarse";
+$route['Administrador/administracion'] = "AdministradorController/administracion";
+$route['Administrador/crear'] = "AdministradorController/crear";
+$route['Administrador/listar'] = "AdministradorController/listar";
+$route['Administrador/validar'] = "AdministradorController/validar";
+$route['Administrador/editar/(:any)'] = "AdministradorController/editar/$1";
+$route['Administrador/editar_datos_admin'] = "AdministradorController/editar_datos_admin";
+$route['Administrador/cambiar_status_diseno/(:any)/(:any)'] = "AdministradorController/cambiar_status_diseno/$1/$2";
+$route['Administrador/cambiar_status_persona/(:any)/(:any)'] = "AdministradorController/cambiar_status_persona/$1/$2";
+$route['Administrador/listar_diseno'] = "AdministradorController/listar_diseno";
+

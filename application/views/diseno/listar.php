@@ -58,7 +58,7 @@
 						<h3 class="panel-title"><?php echo $diseno['nombre']; ?></h3>
 					</div>
 					<div class="panel-body">
-						<img src="<?php echo base_url();?>assets/images/massively.jpg" class="img-responsive">
+						<img src="<?php echo base_url();?>assets/images/<?php echo $diseno['nombre']; ?>.jpg" class="img-responsive">
 					</div>
 
 					<div class="panel-footer">
