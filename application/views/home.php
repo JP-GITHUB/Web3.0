@@ -117,7 +117,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 			<div class="col-sm-4">
 				<span class="glyphicon glyphicon-certificate logo-small"></span>
-				<h4>Publisitarios</h4>
+				<h4>Publicitarios</h4>
 				<p></p>
 
 			</div>

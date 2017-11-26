@@ -49,4 +49,20 @@ class SitioController extends CI_Controller {
 			}
 		}
 	}
+	
+	public function suspender_sitio($id_sitio){
+		$session = $this->session->email_session;
+		if($session){
+			$cuenta = $this->Cliente_model->consultar_cuenta($session);
+			if($cuenta->id_rol === "2"){
+				$id_cliente = $cuenta->id_persona;
+				$estado_update = $this->Sitio_model->suspender_sitio($id_cliente, $id_sitio);
+				if($estado_update){
+					redirect("Cliente/administracion");
+				}else{
+					echo "Err";
+				}
+			}
+		}
+	}
 }

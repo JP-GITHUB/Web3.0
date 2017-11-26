@@ -66,6 +66,7 @@ $route['Cliente/administracion'] = "ClienteController/administracion";
 
 $route['Sitio/configuracion_diseno/(:any)'] = "SitioController/muestra_frm_configuraciones_disenos/$1";
 $route['Sitio/guarda_informacion_sitio'] = "SitioController/guarda_informacion_sitio";
+$route['Sitio/suspender_sitio/(:any)'] = "SitioController/suspender_sitio/$1";
 
 /*Templates*/
 $route['Main/massively/(:any)'] = "Main/massively/$1";

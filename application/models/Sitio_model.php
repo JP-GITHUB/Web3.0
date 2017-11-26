@@ -53,5 +53,16 @@ class Sitio_model extends CI_Model {
 
         return $this->db->insert('sitio', $data);
     }
+    
+    public function suspender_sitio($id_cliente, $id_sitio){
+        
+        $data = array(
+           'estado' => "2"
+        );
+        
+        $this->db->where('id_persona', $id_cliente);
+        $this->db->where('id_sitio', $id_sitio);
+        return $this->db->update('sitio', $data); 
+    }
 
 }
